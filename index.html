@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#26282d">
+<title>Werkraum</title>
+<link id="tab-icon" rel="icon" type="image/png" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAEElEQVR4AQEFAPr/AAAAAAAABQABZHiVOAAAAABJRU5ErkJggg==">
+<link rel="stylesheet" href="style.css">
+<script type="module" src="app.js"></script>
+</head>
+<body>
+<div class="shell">
+  <aside class="sidebar" aria-label="Seitennavigation">
+    <div class="brand-row">
+      <span class="brand" hidden><img alt=""></span>
+      <button class="icon-button sidebar-toggle" data-action="collapse" title="Seitenleiste einklappen" aria-label="Seitenleiste einklappen"></button>
+    </div>
+    <nav id="navigation"></nav>
+    <div class="sidebar-bottom" id="sidebar-bottom"></div>
+  </aside>
+  <div class="workspace">
+    <header class="topbar">
+      <div id="breadcrumbs" class="breadcrumbs"></div>
+      <div class="top-actions">
+        <label class="search" id="search-wrap"><span id="search-icon"></span><input id="search" type="search" placeholder="Apps und Links suchen" aria-label="Apps, Links und Ordner suchen"></label>
+        <div id="viewer-tools" class="row" hidden></div>
+        <button class="button primary" id="add" data-action="add">Hinzufügen</button>
+      </div>
+    </header>
+    <main id="main" tabindex="-1"></main>
+  </div>
+</div>
+<dialog id="dialog"><form id="dialog-form"></form></dialog>
+<div id="toast" role="status" aria-live="polite"></div>
+<input id="pick-html" type="file" accept=".html,.htm,text/html" hidden>
+<input id="pick-folder" type="file" webkitdirectory multiple hidden>
+<input id="pick-backup" type="file" accept=".json,application/json" hidden>
+<input id="pick-branding" type="file" accept=".json,application/json" hidden>
+</body>
+</html>
